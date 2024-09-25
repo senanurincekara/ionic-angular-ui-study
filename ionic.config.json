@@ -1,0 +1,7 @@
+{
+  "name": "calisma",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
