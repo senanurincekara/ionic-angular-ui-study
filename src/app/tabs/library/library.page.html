@@ -1,0 +1,53 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-padding-vertical">
+    <ion-buttons slot="start" (click)="openMenu()">
+      <ion-thumbnail class="menu">
+        <ion-icon name="apps-outline"></ion-icon>
+      </ion-thumbnail>
+    </ion-buttons>
+
+    <ion-segment [(ngModel)]="selectedSegmentValue" (ionChange)="setSelectedSegment($event)" value="all">
+      <ion-segment-button value="all">
+        <ion-label>hepsi</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="notAll">
+        <ion-label>en özel</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <!-- notAll segmenti için özel görsel -->
+  <img *ngIf="selectedSegmentValue === 'notAll'" />
+
+  <!-- 'all' segmenti için tüm verileri gösteriyoruz -->
+  <ion-grid *ngIf="selectedSegmentValue === 'all'">
+    <ion-row>
+      <ion-col size="6" *ngFor="let item of data">
+        <ion-card class="custom-card">
+          <img [src]="item.image" alt="{{item.title}}" class="centered-image" />
+          <ion-card-header>
+            <ion-card-title class="centered-title">{{item.title}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- 'notAll' segmenti için özel verileri gösteriyoruz -->
+  <ion-grid *ngIf="selectedSegmentValue === 'notAll'">
+    <ion-row>
+      <ion-col size="6" *ngFor="let item of notAllData">
+        <ion-card class="custom-card">
+          <img [src]="item.image" alt="{{item.title}}" class="centered-image" />
+          <ion-card-header>
+            <ion-card-title class="centered-title">{{item.title}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ayarlar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+ <ion-row>
+    <ion-text>
+      Dark - Light mode
+    </ion-text>
+        <ion-toggle mode="ios" [(ngModel)]="paletteToggle" (ionChange)="toggleChange($event)" checked class="icon-custom"></ion-toggle>
+
+
+ </ion-row>
+</ion-content>

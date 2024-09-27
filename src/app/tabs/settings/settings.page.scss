@@ -1,0 +1,107 @@
+// ion-toggle {
+//     padding: 12px;
+  
+//     --handle-width: 25px;
+//     --handle-height: 27px;
+//     --handle-max-height: auto;
+//     --handle-spacing: 6px;
+  
+//     contain: none;
+//   }
+  
+
+
+  
+//   ion-toggle::part(handle) {
+//     background: #eb7769;
+  
+//     border-radius: 4px;
+//     box-shadow: none;
+//   }
+  
+//   ion-toggle.toggle-checked::part(handle) {
+//     background: #95c34e;
+//   }
+
+
+ion-title{
+    color: var(--ion-toolbar-title);
+}
+
+ion-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  
+}
+
+ion-text{
+
+    color: var( --ion-color-maincolor-tint);
+    font-weight: bolder;
+}
+
+
+
+ion-toggle {
+    padding: 12px;
+  
+    --handle-width: 25px;
+    --handle-height: 37px;
+    --handle-max-height: auto;
+    --handle-spacing: 5px;
+  
+    contain: none;
+  }
+  
+  ion-toggle::part(track),
+  ion-toggle.toggle-checked::part(track) {
+    height: 10px;
+    width: 65px;
+  
+    background: #ddd;
+  
+    overflow: visible;
+  }
+   
+
+
+  .icon-custom {
+
+    height: 20px;
+    width: 60px;
+    border-color: #000000;
+    --background-checked: #1f711f;
+    --handle-background: #fff6d0
+    url(/assets/sun.png)no-repeat center /
+    contain;
+
+    --handle-background-checked: #fff
+      url(/assets/moon.png)no-repeat center /
+      contain;
+      --handle-width: 30px;
+      --handle-height:40px
+
+     
+
+
+  }
+  
+  .icon-custom::before {
+    position: absolute;
+    content: "";
+    color: rgb(2, 0, 0);
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    font-size: 18px;
+    --background-color: black;
+  
+ 
+  }
+
+
+
+
+  

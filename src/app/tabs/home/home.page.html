@@ -1,0 +1,126 @@
+
+
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-padding-vertical">
+    <ion-title mode="ios">
+      <img src="/assets/logo.png" alt="">
+    </ion-title>
+
+    <ion-buttons slot="start" (click)="openMenu()">
+      <ion-thumbnail  class="menu">
+        <ion-icon name="apps-outline"></ion-icon>
+      </ion-thumbnail>
+    </ion-buttons>
+
+    <ion-buttons slot="end" >
+      <ion-thumbnail (click)="gotoProfilePage()">
+        <img src="/assets/avatar.jpg" alt="">
+      </ion-thumbnail>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-progress-bar type="indeterminate" color="danger"></ion-progress-bar>
+  </ion-refresher>
+
+
+  <p></p>
+  <ion-row class="tagline">
+    <ion-col>
+      <ion-label>
+        <p>
+          <ion-text>Sağlığını Koru</ion-text>
+        </p>
+        <p>
+          <ion-text>Kendine bizimle iyi bak</ion-text>
+        </p>
+      </ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="searchRow">
+    <ion-col size="10">
+      <ion-searchbar placeholder="Arayınız" class="searchBar"></ion-searchbar>
+    </ion-col>
+    <ion-col size="2" class="srchButton">
+      <ion-button (click)="setOpen(true)" mode="ios" class="searchButton">
+        <ion-icon name="apps-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+
+  
+  <!-- <app-cardslider></app-cardslider> -->
+
+
+  <ion-card class="customSwiperCard">
+    <ion-card-content>
+      <swiper-container 
+      class="customSwiper" 
+      [pagination]="true" 
+      [navigation]="true">
+
+        <swiper-slide class="swiperSlide">
+          <img src="
+        /assets/img.png" alt="">
+
+        </swiper-slide>
+
+        <swiper-slide class="swiperSlide">
+          <img src="
+          /assets/img.png" alt="">
+
+        </swiper-slide>
+
+        <swiper-slide class="swiperSlide">
+          <img src="
+          /assets/img.png" alt="">
+
+        </swiper-slide>
+
+      </swiper-container>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+<!-- Neye ihtiyacınız var kısmı , data.jsondan çekildi -->
+  <ion-row class="titleRow">
+    <ion-col>
+      <ion-text >Neye ihtiyacınız var? </ion-text>
+    </ion-col>
+  </ion-row>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" *ngFor="let item of data">
+        <ion-card class="custom-card">
+          <img [src]="item.image" alt="{{item.title}}" class="centered-image" />
+          <ion-card-header>
+            <ion-card-title class="centered-title">{{item.title}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+
+
+
+  <ion-row class="tagline">
+    <ion-col>
+      <ion-text>iletişime geçmek için : </ion-text>
+    </ion-col>
+
+    <ion-col class="ion-text-end">
+      <ion-button (click)="presentContactModal()">Contact Us</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

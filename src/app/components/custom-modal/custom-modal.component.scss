@@ -1,0 +1,138 @@
+ion-content {
+
+    --background: rgb(253, 253, 253);
+
+
+
+    .ion-padding {
+        padding-top: 50px;
+        padding-right: 20px;
+        padding-left: 20px;
+
+    }
+
+    .input-item {
+
+        border: 1px solid #ccc;
+        padding: 5px;
+
+        border-radius: 15px;
+        box-shadow: 0 2px 3px rgba(28, 28, 28, 0.89);
+
+    }
+
+
+
+    ion-item {
+        --background: #830303;
+        --border-radius: 12px;
+        margin-bottom: 16px;
+        color: #ffffff;
+
+    }
+
+
+    ion-list {
+        background-color: white;
+        margin: 10px;
+    }
+
+
+    ion-select {
+        --placeholder-color: #ffffff;
+        --placeholder-opacity: 1;
+    }
+
+
+
+}
+
+
+
+ion-toolbar {
+    --background: #680101;
+    --padding-start: 1.5vh;
+    --padding-end: 1.5vh;
+
+
+}
+
+
+
+
+.custom-group-accordion {
+
+    background-color: white !important;
+    margin: 10px;
+
+    .custom-accordion {
+        color: #ffffff !important;
+        background-color: transparent;
+    }
+
+    ion-item {
+        --background: #070707;
+        --border-radius: 12px;
+        margin-bottom: 16px;
+        color: #ffffff; //baslığımmde
+        padding-top: 0px;
+
+
+    }
+
+    .customDiv {
+        padding-top: 0px;
+        padding-left: 10px;
+        padding-bottom: 5px;
+        color: #2e0000 !important;
+    }
+}
+
+
+ion-breadcrumbs {
+    color: black;
+}
+
+
+
+ion-note {
+    padding: 10px;
+    font-size: 25px;
+}
+
+
+
+
+ion-radio::part(container) {
+    width: 30px;
+    height: 30px;
+  
+    border-radius: 8px;
+    border: 2px solid #ddd;
+  }
+  
+  ion-radio::part(mark) {
+    background: none;
+    transition: none;
+    transform: none;
+    border-radius: 0;
+    --color-checked: black;
+  }
+  
+  ion-radio.radio-checked::part(container) {
+    background: #6815ec;
+    border-color: transparent;
+  
+  }
+  
+  ion-radio.radio-checked::part(mark) {
+    width: 6px;
+    height: 10px;
+  
+    border-width: 0px 2px 2px 0px;
+    border-style: solid;
+    border-color: #fff;
+   
+  
+    transform: rotate(45deg);
+  }

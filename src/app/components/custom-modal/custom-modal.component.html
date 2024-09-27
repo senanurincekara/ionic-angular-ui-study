@@ -1,0 +1,122 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Alıştırma</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- <div class="login-header ion-padding">
+    <div class="first-container">
+
+      <p class="title-text">Alıstırma</p>
+    </div>
+
+  </div> -->
+
+
+  <ion-list>
+
+    <ion-item>
+      <ion-select placeholder="Select a Item" interface="action-sheet" [interfaceOptions]="customActionSheetOptions">
+        <div slot="label">Favorite item <ion-text color="medium">(zorunlu)</ion-text></div>
+        <ion-select-option value="item1">item1</ion-select-option>
+        <ion-select-option value="item2">item1</ion-select-option>
+        <ion-select-option value="item3">item1</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Main Title</ion-label>
+      <ion-badge color="primary">{{numTemp}}</ion-badge>
+    </ion-item>
+
+
+    <ion-accordion-group expand="inset" class="custom-group-accordion">
+      <ion-accordion value="first" class="custom-accordion">
+        <ion-item slot="header">
+          <ion-label>First Accordion</ion-label>
+        </ion-item>
+        <div class="customDiv" slot="content">First Content</div>
+      </ion-accordion>
+      <ion-accordion value="second" class="custom-accordion">
+        <ion-item slot="header">
+          <ion-label>Second Accordion</ion-label>
+        </ion-item>
+        <div class="customDiv" slot="content">Second Content</div>
+      </ion-accordion>
+      <ion-accordion value="third" class="custom-accordion">
+        <ion-item slot="header">
+          <ion-label>Third Accordion</ion-label>
+        </ion-item>
+        <div class="customDiv" slot="content">Third Content</div>
+      </ion-accordion>
+    </ion-accordion-group>
+
+
+
+
+    <ion-breadcrumbs [maxItems]="4" id="popover-button" color="primary">
+      <ion-breadcrumb href="">Home</ion-breadcrumb>
+      <ion-breadcrumb href="">Electronics</ion-breadcrumb>
+      <ion-breadcrumb href="">Photography</ion-breadcrumb>
+      <ion-breadcrumb href="">Cameras</ion-breadcrumb>
+      <ion-breadcrumb href="">Film</ion-breadcrumb>
+      <ion-breadcrumb href="">35 mm</ion-breadcrumb>
+    </ion-breadcrumbs>
+
+    <ion-popover trigger="popover-button" [dismissOnSelect]="true" [interfaceOptions]="customPopOverOptions">
+
+
+      <ng-template>
+        <ion-content>
+          <ion-list>
+            <ion-item [button]="true" [detail]="false">Option 1</ion-item>
+            <ion-item [button]="true" [detail]="false">Option 2</ion-item>
+            <ion-item [button]="true" id="nested-trigger">More options...</ion-item>
+
+            <ion-popover trigger="nested-trigger" [dismissOnSelect]="true" side="end">
+              <ng-template>
+                <ion-content>
+                  <ion-list>
+                    <ion-item [button]="true" [detail]="false">Nested option</ion-item>
+                    <ion-item [button]="true" [detail]="false">Nested option</ion-item>
+                    <ion-item [button]="true" [detail]="false">Nested option</ion-item>
+                  </ion-list>
+                </ion-content>
+              </ng-template>
+            </ion-popover>
+          </ion-list>
+        </ion-content>
+      </ng-template>
+    </ion-popover>
+
+
+    <ion-note color="warning">Not Kullanımı</ion-note>
+
+
+
+
+
+    <ion-item>
+      <ion-radio-group [allowEmptySelection]="true" value="turtles">
+        <ion-radio  aria-label="Success" color="success" value="dogs">Dogs</ion-radio><br />
+        <ion-radio   aria-label="Danger" color="danger" value="cats">Cats</ion-radio><br />
+        <ion-radio value="turtles">Turtles</ion-radio><br />
+        <ion-radio value="fish">Fish</ion-radio><br />
+      </ion-radio-group>
+    </ion-item>
+    
+
+
+    
+    
+  </ion-list>
+
+
+
+
+</ion-content>

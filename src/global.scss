@@ -35,3 +35,129 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+
+.my-custom-class {
+    --background: #ffffff;
+    
+    
+  }
+  
+  .my-custom-class .alert-title {
+    color:rgb(32, 0, 0) !important;
+    font-weight: bolder;
+    font-size: 20px;
+    
+   
+  }
+
+
+  .my-custom-class .alert-sub-title {
+    color:rgb(58, 0, 0) !important;
+    font-weight: bold;
+
+    font-size:16px;
+   
+  }
+
+  .customButtoncss{
+    color: #250701 !important;
+    background-color: #ffffff !important;
+    font-weight: bolder !important;
+    box-shadow: 0 2px 3px rgba(28, 28, 28, 0.89) !important; 
+    
+        border: solid 1px black !important;
+        border-radius: 21% !important;
+
+  }
+  
+
+  .action-sheet-group {
+    background: #f8f9fa !important;
+    margin: 10px;
+    border-radius: 40px;
+    box-shadow: 0 2px 2px rgba(28, 28, 28, 0.61) !important; 
+  }
+
+
+  .action-sheet-title {
+    color: #460e03 !important;
+    font-size: 20px; 
+    font-weight: bolder;
+  }
+
+  .action-sheet-sub-title{
+    padding-top: 5px !important;
+  }
+  
+  .action-sheet-button {
+    color: #460e03 !important;
+    font-size: 20px; 
+    font-weight: bolder;
+  }
+
+
+  :root {
+    --ion-item-border-color: var(--ion-background-color-step-200);
+  }
+  
+  /* This sets a different background and item background for the default theme on ios */
+  :root.ios {
+    --ion-background-color: var(--ion-background-color-step-50);
+    --ion-toolbar-background: var(--ion-background-color);
+    --ion-item-background: #1c1c1d;
+  }
+  
+  /* This sets a different background and item background for the default theme on md */
+  :root.md {
+    --ion-background-color: var(--ion-background-color-step-100);
+    --ion-toolbar-background: var(--ion-background-color);
+    --ion-item-background: #1c1c1d;
+  }
+
+
+
+
+
+  // .ios body {
+  //   --ion-background-color: rgb(255, 255, 255);
+  //   --ion-toolbar-background: white;
+  //   --ion-item-background: #fff;
+  //   --ion-tab-bar-background: rgb(255, 255, 255);
+
+  //   --ion-color-maincolor: #ededed;
+  //   --ion-color-maincolor-rgb: 237,237,237;
+  //   --ion-color-maincolor-contrast: #000000;
+  //   --ion-color-maincolor-contrast-rgb: 0,0,0;
+  //   --ion-color-maincolor-shade: #d1d1d1;
+  //   --ion-color-maincolor-tint: #efefef;
+
+
+  // }
+  
+  // /* This sets a different background and item background in light mode on md */
+  // .md body {
+  //   --ion-background-color: rgb(255, 255, 255);
+  //   --ion-toolbar-background: white;
+  //   --ion-item-background: #5e1f1f;
+  //   --ion-tab-bar-background: rgb(255, 255, 255);
+
+
+  //   --ion-color-maincolor: #ededed;
+  //   --ion-color-maincolor-rgb: 237,237,237;
+  //   --ion-color-maincolor-contrast: #000000;
+  //   --ion-color-maincolor-contrast-rgb: 0,0,0;
+  //   --ion-color-maincolor-shade: #d1d1d1;
+  //   --ion-color-maincolor-tint: #efefef;
+  // }
+  
+  // /* This is added for the flashing that happens when toggling between themes */
+  // ion-item {
+  //   --transition: none;
+  // }
+
+
+
+
+ 
+  

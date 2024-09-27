@@ -1,0 +1,84 @@
+
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-padding-vertical" lines="none">
+     <ion-title color="light">
+      Profil
+     </ion-title> 
+
+    <ion-buttons slot="end" (click)="openMenu()">
+      <ion-thumbnail class="menu" >
+        <ion-icon name="apps-outline"></ion-icon>
+      </ion-thumbnail>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<!-- 
+  <ion-refresher 
+      slot="fixed"
+
+
+      [pullFactor]="0.5"
+        [pullMin]="100"
+        [pullMax]="200" 
+        (ionRefresh)="handleRefresh($event)">
+        <ion-refresher-content
+            pullingIcon="chevron-down-circle-outline"
+            color="danger"
+            refreshingSpinner="circles"
+        >
+        </ion-refresher-content>
+  </ion-refresher>
+   -->
+
+ 
+      <div class="header-content">
+        <img [src]="'assets/avatar.jpg'" />
+        <ion-label class="labelName">
+          userName 
+          <p >
+            <ion-text class="ion-custom-text" color="dark"> user mail here </ion-text>
+          </p>
+        </ion-label>
+
+        <ion-button slot="end" color="005a00"  (click)="presentContactModal()" expand="block">
+          <ion-icon aria-hidden="true" name="sparkles-outline" ></ion-icon>
+
+        </ion-button>
+        </div>
+
+        <ion-list [inset]="true">
+          <ion-item>
+            <ion-icon aria-hidden="true" name="airplane" slot="start"></ion-icon>
+            <ion-label>Airplane Mode</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon aria-hidden="true" name="airplane" slot="start"></ion-icon>
+            <ion-label>Airplane Mode</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon aria-hidden="true" name="airplane" slot="start"></ion-icon>
+            <ion-label>Airplane Mode</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon aria-hidden="true" name="airplane" slot="start"></ion-icon>
+            <ion-label>Airplane Mode</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon aria-hidden="true" name="airplane" slot="start"></ion-icon>
+            <ion-label>Airplane Mode</ion-label>
+          </ion-item>
+        </ion-list>  
+
+
+
+        
+   
+
+</ion-content>
+
+
+
+
